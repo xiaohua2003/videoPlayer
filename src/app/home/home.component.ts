@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  url='https://www.youtube.com/embed/M9y1X-WQkLo'
   constructor() { }
 
   ngOnInit(): void {

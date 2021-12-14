@@ -1,1 +1,10 @@
 <p>video-list works!</p>
+<ul class="nav nav-pills nav-stacked">
+  <li
+    class="videoTitle"
+    (click)="showVideo(video)"
+    *ngFor="let video of videoList"
+  >
+    <a>{{ video.title }}</a>
+  </li>
+</ul>

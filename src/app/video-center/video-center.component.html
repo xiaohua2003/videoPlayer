@@ -1,8 +1,11 @@
 <div class="row">
+  
     <div class="col-sm-9">
-      <app-video-detail></app-video-detail>
+      <app-video-detail *ngIf="selectedVideo" [videoSelect]='selectedVideo'></app-video-detail>
     </div>
     <div class="col-sm-3">
-      <app-video-list></app-video-list>
+      <app-video-list  (newvideoEvent)="selectVideo($event)" [videoList]='videos' ></app-video-list>
     </div>
 </div>
+<p>{{errorMsg |json}}</p>
+

@@ -1,1 +1,35 @@
-<p>video-detail works!</p>
+<h2>video-detail works!</h2>
+<div>
+  <div>
+    <iframe
+  [src]="videoSelect.url.replace('watch?v=', 'embed/')|safeUrl"
+  height="200"
+  width="300"
+  title="Iframe Example"
+></iframe>
+  </div>
+  <form>
+    <div class="form-group">
+      <label>Video Title</label>
+      <input [(ngModel)]="videoSelect.title" name="title" class="form-control" id="exampleFormControlInput1" />
+    </div>
+    <div class="form-group">
+      <label>Video URL</label>
+      <input  [(ngModel)]="videoSelect.url" name="url" class="form-control" id="url" />
+    </div>
+    <div class="form-group">
+      <label>Video Description</label>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        [(ngModel)]="videoSelect.description"
+        name="description"
+      ></textarea>
+    </div>
+  </form>
+</div>
+
+
+
+
